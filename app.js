@@ -46,7 +46,7 @@ recognition.onresult = function(event) {
   var word = event.results[lastFound][0].transcript;
   error_msgs.textContent = 'Word finded: '+ word + ' !';
   console.log('Confidence:'+event.results[0][0].confidence);
-  speak('word');
+  speak(word);
 }
 
 recognition.onspeechend = function(){
